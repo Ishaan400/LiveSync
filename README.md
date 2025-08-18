@@ -1,6 +1,6 @@
 ## LiveSync Backend
 
-[![CI](https://github.com/Ishaan400/LiveSync/actions/workflows/ci.yml/badge.svg)](https://github.com/Ishaan400/LiveSync/actions/workflows/ci.yml)
+
 
 A Node.js/Express backend for realtime collaborative document editing. It uses Automerge CRDTs over WebSockets for live syncing, MongoDB for persistence, Redis for pub/sub and presence, and JWT for authentication. Includes Swagger docs, Docker setup, and a test suite.
 
