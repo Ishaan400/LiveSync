@@ -155,3 +155,22 @@ Server responds with events such as `{ "type": "doc" }`, `{ "type": "sync" }`, a
 ## Notes
 - Rate limiting and request logging are enabled by default.
 - In tests, the Redis client is replaced with an inmemory stub when `NODE_ENV=test` or `REDIS_URL` is unset.
+
+
+## Endpoints Screenshots
+
+<img width="1879" height="866" alt="Screenshot 2025-08-19 142525" src="https://github.com/user-attachments/assets/0d13e473-ed9d-444c-8314-0c0be4eb8cdb" />
+<img width="1870" height="892" alt="Screenshot 2025-08-19 142549" src="https://github.com/user-attachments/assets/995737cc-c238-4622-b600-fa0e078cf46e" />
+<img width="1870" height="426" alt="Screenshot 2025-08-19 142600" src="https://github.com/user-attachments/assets/759e5cb5-a3d5-4606-b5b9-d2f970520453" />
+<img width="1801" height="888" alt="Screenshot 2025-08-19 142659" src="https://github.com/user-attachments/assets/9e71f539-1a15-4ff2-bf98-5857ba91e5bb" />
+<img width="1789" height="914" alt="Screenshot 2025-08-19 142912" src="https://github.com/user-attachments/assets/696b224f-2706-4cc0-97d7-7573e8442498" />
+<img width="1781" height="884" alt="Screenshot 2025-08-19 143024" src="https://github.com/user-attachments/assets/2fa2320f-8cfa-4163-a1ce-80a245f6980e" />
+<img width="1782" height="881" alt="Screenshot 2025-08-19 143228" src="https://github.com/user-attachments/assets/b3c7ec7b-3f05-4a1b-b997-e8841f83f337" />
+<img width="984" height="507" alt="Screenshot 2025-08-19 143410" src="https://github.com/user-attachments/assets/105abd84-f8af-41be-a31c-e59c4371d02f" />
+<img width="1758" height="895" alt="Screenshot 2025-08-19 143510" src="https://github.com/user-attachments/assets/5be0c74a-f2ef-4d3a-9b62-1d877cef9b0b" />
+<img width="1777" height="912" alt="Screenshot 2025-08-19 143621" src="https://github.com/user-attachments/assets/9600d303-71db-4a00-b608-176c2a3e0628" />
+<img width="1775" height="880" alt="Screenshot 2025-08-19 143840" src="https://github.com/user-attachments/assets/0394468a-b916-40fd-9ef2-208d3102cf5d" />
+<img width="1774" height="909" alt="Screenshot 2025-08-19 144148" src="https://github.com/user-attachments/assets/0a198fee-ca42-4409-9819-dc4c252a48eb" />
+<img width="1768" height="885" alt="Screenshot 2025-08-19 144446" src="https://github.com/user-attachments/assets/ac45d32a-e1b4-4c84-993a-3668ce2baabb" />
+<img width="1794" height="917" alt="Screenshot 2025-08-19 144650" src="https://github.com/user-attachments/assets/db4ed19e-cac8-4a26-aa16-6f5e7bf58670" />
+<img width="1753" height="879" alt="Screenshot 2025-08-19 144905" src="https://github.com/user-attachments/assets/158cad2d-28ac-4db8-ad8e-bc7779db04b9" />
