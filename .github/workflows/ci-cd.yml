@@ -77,20 +77,6 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  deploy-railway:
-    name: Trigger Railway deploy
-    runs-on: ubuntu-latest
-    needs: build-and-push
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - name: Trigger Railway Deploy Hook
-        env:
-          RAILWAY_DEPLOY_HOOK: ${{ secrets.RAILWAY_DEPLOY_HOOK }}
-        run: |
-          if [ -z "$RAILWAY_DEPLOY_HOOK" ]; then
-            echo "RAILWAY_DEPLOY_HOOK not set; skipping deploy trigger.";
-            exit 0;
-          fi
-          curl -fsS -X POST "$RAILWAY_DEPLOY_HOOK"
+  # deploy-railway job intentionally removed per user request
 
 
