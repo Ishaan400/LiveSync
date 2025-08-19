@@ -53,34 +53,17 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract Docker metadata (API)
-        id: meta_api
-        uses: docker/metadata-action@v5
-        with:
-          images: ghcr.io/${{ env.GHCR_OWNER }}/livesync-backend-api
-          tags: |
-            type=raw,value=latest
-            type=sha
-
       - name: Build and push API image
         uses: docker/build-push-action@v5
         with:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.meta_api.outputs.tags }}
-          labels: ${{ steps.meta_api.outputs.labels }}
+          tags: |
+            ghcr.io/ishaan400/livesync-backend-api:latest
+            ghcr.io/ishaan400/livesync-backend-api:sha-${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-
-      - name: Extract Docker metadata (Automerge WS)
-        id: meta_ws
-        uses: docker/metadata-action@v5
-        with:
-          images: ghcr.io/${{ env.GHCR_OWNER }}/livesync-backend-automerge
-          tags: |
-            type=raw,value=latest
-            type=sha
 
       - name: Build and push Automerge WS image
         uses: docker/build-push-action@v5
@@ -88,8 +71,9 @@ jobs:
           context: .
           file: ./Dockerfile.automerge
           push: true
-          tags: ${{ steps.meta_ws.outputs.tags }}
-          labels: ${{ steps.meta_ws.outputs.labels }}
+          tags: |
+            ghcr.io/ishaan400/livesync-backend-automerge:latest
+            ghcr.io/ishaan400/livesync-backend-automerge:sha-${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
